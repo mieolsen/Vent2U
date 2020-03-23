@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="style.css">
+<title>lærer</title>
+</head>
+
+<body>
+<section class="header"> <a href="login.html">
+  <button id="tilbage" class="knapper">Tilbage</button>
+  </a> <a href="login.html">
+  <button id="logud" class="knapper">Log ud</button>
+  </a>
+  <h1>Lokale X</h1>
+</section>
+<section class="allrakke">
+  <article class="alle">
+    <article class="overskrift">
+      <h2>Alle rækker</h2>
+    </article>
+    <article class="knap">
+      <button class="knapper" id="tandsluk" onclick="selectAll()"> Tænd alle </button>
+      <button class="knapper" onclick="UnSelectAll()"> Sluk Alle </button>
+    </article>
+  </article>
+  <article class="controlAll">
+    <p class="labelslide">Temperatur</p>
+    <p class="labelvalue">Value: <span id="tdemoMaster"></span> </p>
+    <div class="slidecontainer">
+      <input type="range" min="170" max="220" value="200" class="Tempslider"  id="tRangeMaster" oninput="masterSliderTemp()">
+    </div>
+    <p class="labelslide">Ventilation</p>
+    <p class="labelvalue">Value: <span id="vdemomaster"></span> </p>
+    <div class="slidecontainer">
+      <input type="range" min="1" max="100" value="40" class="Ventslider" id="vRangeMaster" oninput="masterSliderVent()">
+    </div>
+  </article>
+</section>
+<section class="rakke">
+  <article class="oprindelig">
+    <article class="overskrift">
+      <h2>Række 1</h2>
+    </article>
+    <article class="knap">
+      <p>Sluk/Tænd</p>
+      <label class="switch">
+        <input type="checkbox" name="acs" id="check1" onclick="ToggleFunction()">
+        <span class="slider round"></span> </label>
+    </article>
+  </article>
+  <article class="nydiv">
+    <p class="labelslide">Temperatur</p>
+    <p class="labelvalue">Value: <span id="demo0"></span> </p>
+    <div class="slidecontainer">
+      <input type="range" min="170" max="220" value="200" class="slider1" id="myRange0" oninput="sliderFunctionTemp()">
+    </div>
+    <p class="labelslide">Ventilation</p>
+    <p class="labelvalue">Value: <span id="demo1"></span> </p>
+    <div class="slidecontainer">
+      <input type="range" min="1" max="100" value="40" class="slider1" id="myRange1" oninput="sliderFunctionVent()">
+    </div>
+  </article>
+</section>
+<section class="rakke">
+  <article class="oprindelig">
+    <article class="overskrift">
+      <h2>Række 2</h2>
+    </article>
+    <article class="knap">
+      <p>Sluk/Tænd</p>
+      <label class="switch">
+        <input type="checkbox" name="acs" id="check1" onclick="ToggleFunction()">
+        <span class="slider round"></span> </label>
+    </article>
+  </article>
+  <article class="nydiv">
+    <p class="labelslide">Temperatur</p>
+    <p class="labelvalue">Value: <span id="demo2"></span> </p>
+    <div class="slidecontainer">
+      <input type="range" min="170" max="220" value="200" class="slider1" id="myRange2" oninput="sliderFunctionTemp()">
+    </div>
+    <p class="labelslide">Ventilation</p>
+    <p class="labelvalue">Value: <span id="demo3"></span> </p>
+    <div class="slidecontainer">
+      <input type="range" min="1" max="100" value="40" class="slider1" id="myRange3" oninput="sliderFunctionVent()">
+    </div>
+  </article>
+</section>
+<section class="rakke">
+  <article class="oprindelig">
+    <article class="overskrift">
+      <h2>Række 3</h2>
+    </article>
+    <article class="knap">
+      <p>Sluk/Tænd</p>
+      <label class="switch">
+        <input type="checkbox" name="acs" id="check1" onclick="ToggleFunction()">
+        <span class="slider round"></span> </label>
+    </article>
+  </article>
+  <article class="nydiv">
+    <p class="labelslide">Temperatur</p>
+    <p class="labelvalue">Value: <span id="demo4"></span> </p>
+    <div class="slidecontainer">
+      <input type="range" min="170" max="220" value="200" class="slider1" id="myRange4" oninput="sliderFunctionTemp()">
+    </div>
+    <p class="labelslide">Ventilation</p>
+    <p class="labelvalue">Value: <span id="demo5"></span> </p>
+    <div class="slidecontainer">
+      <input type="range" min="1" max="100" value="40" class="slider1" id="myRange5" oninput="sliderFunctionVent()">
+    </div>
+  </article>
+</section>
+<script type="text/javascript" src="javascript.js"></script>
+</body>
+</html>
