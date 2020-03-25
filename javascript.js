@@ -6,6 +6,12 @@ Storage.prototype.getObj = function (key) {
 }
 
 var errors = localStorage.getObj("errorkey");
+if (errors == null)
+	{
+		errors = [];
+		localStorage.setObj("errorkey", errors);
+	}
+
 
 
 function logInd() {
@@ -174,6 +180,7 @@ function loadErrors(Buttons) {
   var liste = document.querySelector('.fejl-ul');
 
   liste.innerHTML = "";
+	
   for (var i = 0; i < errors.length; i++) {
     var textElement = document.createElement('li');
     textElement.innerHTML = errors[i];
@@ -190,7 +197,7 @@ function loadErrors(Buttons) {
     for (let x = 0; x < close.length; x++) {
       close[x].onclick = function () {
         deleteButton(x);
-      };
+      }
     }
   }
 }
@@ -202,13 +209,13 @@ function ErrorListTeacher() {
   var inputField = document.querySelector('#besked-field')
 
   if (inputElement.value != "") {
-    var liste = document.querySelector('.fejl-liste')
+    var liste = document.querySelector('.fejl-ul')
 
     var textElement = document.createElement('li')
 
     textElement.innerHTML = inputValue;
     liste.appendChild(textElement)
-
+	
     errors.push(inputValue);
     localStorage.setObj("errorkey", errors);
   }
