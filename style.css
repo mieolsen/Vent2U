@@ -1,5 +1,19 @@
 @charset "UTF-8";
 /* CSS Document */
+/* Style the close button */
+.close {
+  float: right;
+  padding: 6px 8px 6px 8px;
+background-color: #f44336;
+	color: white;
+}
+
+.close:hover {
+  background-color: #B21509 ;
+  
+}
+
+
 * {
 	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
 }
@@ -167,6 +181,104 @@ body {
   margin-right: auto;
   display: none;
 }
+
+.laerer-fejl {
+  background-color: grey;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 25px;
+  margin-top:30px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 5px 3px black;
+  height: 150px;
+  color:white;
+	position: relative;
+	
+	 
+  
+}
+
+.laerer-fejl-art {
+	position: absolute;
+	top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+
+
+/*--fejl sider---------------------------------------------------------------------------------------------------------------------------*/
+
+.laerer-form{
+  height:250px;
+  position:relative;
+  margin-bottom: 50px;
+  
+}
+
+#laerer-fejl-holder {
+	display: block;
+  width: 100%;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+#laerer-fejl-holder h2{
+text-align: center;
+}
+
+#emne-field, #besked-field {
+	display: block;
+	width:50%;
+	margin-left: auto;
+	margin-right: auto;
+	height: 40px;
+	margin-bottom:30px;
+	border-radius: 25px;
+	padding-left: 10px;
+	border:none;
+}
+
+#fejl-form-submit {
+	margin-right: auto;
+	margin-left: auto;
+	
+}
+
+
+#fejl-form-submit {
+	margin-right: auto;
+	margin-left: auto;
+	
+}
+
+.fejl-liste {
+	width:50%;
+  margin-right:auto;
+  margin-left:auto;
+width:40%;
+	margin-bottom:30px;
+}
+.fejl-liste h2 {
+	
+	text-align:center;
+}
+
+.fejl-liste li {
+	padding: 10px;
+}
+
+
+/*--range slider styling---------------------------------------------------------------------------------------------------------------------------*/
+
+
+
 .labelslide {
   margin-top: 0;
   margin-left: 10%;
@@ -328,6 +440,15 @@ input:checked + .slider:before {
 
 
 /*--------------------------------------------------------------------------------------------------------------------------------------*/
-
+@media only screen and (max-width: 768px) {
+  
+	.header, .rakke, .allrakke, .laerer-fejl {
+		width:80%;
+	}
+	
+	#password-field, #username-field, #emne-field, #besked-field  {
+		width:80%;
+	}
+}
 
 

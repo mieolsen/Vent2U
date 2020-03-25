@@ -1,10 +1,43 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>login</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+<link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body onLoad="loadErrors(false)">
+	<section class="header"> 
+	<a href="laerer.html">
+  <button id="tilbage" class="knapper">Tilbage</button>
+  </a> 
+	<a href="index.html">
+  <button id="logud" class="knapper">Log ud</button>
+  </a>
+  <h1>Lokale X</h1>
+</section>
+<section class="laerer-form">
+  <article id="laerer-fejl-holder">
+	  <h2>Angiv fejl</h2>
+    <form id="laerer-form">
+      <input type="text" name="Enme" id="emne-field" class="fejl-form-field" placeholder="emne">
+      <input type="text-area" name="besked" id="besked-field" class="fejl-form-field" placeholder="Skriv besked her:">
+      <input type="button" value="Send" class="knapper" id="fejl-form-submit" onclick="ErrorListTeacher()" >
+    </form>
+  </article>
+</section>
+	
+<section class="sendte-fejl">
+<article class="fejl-liste">
+	<h2>Indsendte fejl:</h2>
+<ul class="fejl-ul">
+
+	
+</ul>
+</article>	
+</section>
+<script type="text/javascript" src="javascript.js"></script>
 </body>
 </html>
+
