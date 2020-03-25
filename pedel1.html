@@ -2,9 +2,137 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>login</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<title>pedel</title>
 </head>
 
-<body>
+<body onLoad="sliderLoad()">
+	
+	
+<section class="header"> 
+	<a href="index.html">
+  <button id="tilbage" class="knapper">Tilbage</button>
+  </a> 
+	<a href="index.html">
+  <button id="logud" class="knapper">Log ud</button>
+  </a>
+  <h1>Oversigt</h1>
+</section>
+	
+<a href="pedelfejl.html">
+<section class="laerer-fejl">
+  <article class="laerer-fejl-art ">
+	 <h2>Se fejlmeddelelser</h2>
+  </article> 
+</section>	
+</a> 
+<section class="allrakke">
+  <article class="alle">
+    <article class="overskrift">
+      <h2>Alle lokaler</h2>
+    </article>
+    <article class="knap">
+      <button class="knapper" id="tandsluk" onclick="selectAll()"> Tænd alle </button>
+      <button class="knapper" onclick="UnSelectAll()"> Sluk Alle </button>
+    </article>
+  </article>
+  <article class="controlAll">
+    <p class="labelslide">Temperatur</p>
+    <p class="labelvalue">Value: <span id="tdemoMaster"></span> </p>
+    <div class="slidecontainer">
+      <input type="range" min="170" max="220" value="200" class="Tempslider"  id="tRangeMaster" oninput="masterSliderTemp()">
+    </div>
+    <p class="labelslide">Ventilation</p>
+    <p class="labelvalue">Value: <span id="vdemomaster"></span> </p>
+    <div class="slidecontainer">
+      <input type="range" min="1" max="100" value="40" class="Ventslider" id="vRangeMaster" oninput="masterSliderVent()">
+    </div>
+  </article>
+</section>
+
+	
+<a href="pedel-raeker.html">
+<section class="rakke">
+  <article class="oprindelig">
+    <article class="overskrift">
+      <h2>Lokale 1</h2>
+    </article>
+    <article class="knap">
+      <p>Sluk/Tænd</p>
+      <label class="switch">
+        <input type="checkbox" name="acs" id="check1" onclick="ToggleFunction()">
+        <span class="slider round"></span> </label>
+    </article>
+  </article>
+  <article class="nydiv">
+    <p class="labelslide">Temperatur</p>
+    <p class="labelvalue">Value: <span id="tempDemo0"></span> </p>
+    <div class="slidecontainer">
+      <input type="range" min="170" max="220" value="200" class="slider1" id="tempRange0" oninput="sliderFunctionTemp()">
+    </div>
+    <p class="labelslide">Ventilation</p>
+    <p class="labelvalue">Value: <span id="ventDemo0"></span> </p>
+    <div class="slidecontainer">
+      <input type="range" min="1" max="100" value="40" class="slider1" id="ventRange0" oninput="sliderFunctionVent()">
+    </div>
+  </article>
+</section>
+	</a>
+<a href="pedel-raeker.html">
+<section class="rakke">
+  <article class="oprindelig">
+    <article class="overskrift">
+      <h2>Lokale 2</h2>
+    </article>
+    <article class="knap">
+      <p>Sluk/Tænd</p>
+      <label class="switch">
+        <input type="checkbox" name="acs" id="check2" onclick="ToggleFunction()">
+        <span class="slider round"></span> </label>
+    </article>
+  </article>
+  <article class="nydiv">
+    <p class="labelslide">Temperatur</p>
+    <p class="labelvalue">Value: <span id="tempDemo1"></span> </p>
+    <div class="slidecontainer">
+      <input type="range" min="170" max="220" value="200" class="slider1" id="tempRange1" oninput="sliderFunctionTemp()">
+    </div>
+    <p class="labelslide">Ventilation</p>
+    <p class="labelvalue">Value: <span id="ventDemo1"></span> </p>
+    <div class="slidecontainer">
+      <input type="range" min="1" max="100" value="40" class="slider1" id="ventRange1" oninput="sliderFunctionVent()">
+    </div>
+  </article>
+</section>
+</a>
+<a href="pedel-raeker.html">
+<section class="rakke">
+  <article class="oprindelig">
+    <article class="overskrift">
+      <h2>lokale 3</h2>
+    </article>
+    <article class="knap">
+      <p>Sluk/Tænd</p>
+      <label class="switch">
+        <input type="checkbox" name="acs" id="check3" onclick="ToggleFunction()">
+        <span class="slider round"></span> </label>
+    </article>
+  </article>
+  <article class="nydiv">
+    <p class="labelslide">Temperatur</p>
+    <p class="labelvalue">Value: <span id="tempDemo2"></span> </p>
+    <div class="slidecontainer">
+      <input type="range" min="170" max="220" value="200" class="slider1" id="tempRange2" oninput="sliderFunctionTemp()">
+    </div>
+    <p class="labelslide">Ventilation</p>
+    <p class="labelvalue">Value: <span id="ventDemo2"></span> </p>
+    <div class="slidecontainer">
+      <input type="range" min="1" max="100" value="40" class="slider1" id="ventRange2" oninput="sliderFunctionVent()">
+    </div>
+  </article>
+</section>
+	</a>	
+	
+<script type="text/javascript" src="javascript.js"></script>
 </body>
 </html>

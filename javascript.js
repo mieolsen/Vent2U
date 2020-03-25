@@ -1,5 +1,14 @@
-function logInd() {
+Storage.prototype.setObj = function (key, obj) {
+  return this.setItem(key, JSON.stringify(obj))
+}
+Storage.prototype.getObj = function (key) {
+  return JSON.parse(this.getItem(key))
+}
 
+var errors = localStorage.getObj("errorkey");
+
+
+function logInd() {
 
   var userId = document.querySelector("#username-field").value;
   if (userId == "lærer") {
@@ -12,11 +21,10 @@ function logInd() {
 }
 
 
-var tempRange = ["myRange0", "myRange2", "myRange4"];
-var tempDemo = ["demo0", "demo2", "demo4"];
-var ventRange = ["myRange1", "myRange3", "myRange5"];
-var ventDemo = ["demo1", "demo3", "demo5"];
-
+var tempRange = ["tempRange0", "tempRange1", "tempRange2"];
+var tempDemo = ["tempDemo0", "tempDemo1", "tempDemo2"];
+var ventRange = ["ventRange0", "ventRange1", "ventRange2"];
+var ventDemo = ["ventDemo0", "ventDemo1", "ventDemo2"];
 
 function sliderFunctionTemp() {
   var equal = true;
@@ -100,8 +108,11 @@ function masterSliderVent() {
   sliderFunctionTemp();
   sliderFunctionVent();
 }
-//masterSliderTemp();
-//masterSliderVent();
+
+function sliderLoad() {
+  masterSliderTemp();
+  masterSliderVent();
+}
 
 function ToggleFunction() {
   var anyOn = false;
@@ -148,4 +159,60 @@ function UnSelectAll() {
 
   }
   ToggleFunction();
+}
+
+function deleteButton(position) {
+  errors = localStorage.getObj("errorkey");
+  //liste.removeChild(liste.childNodes[x]);
+  errors.splice(position, 1);
+  localStorage.setObj("errorkey", errors);
+  loadErrors(true);
+}
+
+function loadErrors(Buttons) {
+  errors = localStorage.getObj("errorkey");
+  var liste = document.querySelector('.fejl-ul');
+
+  liste.innerHTML = "";
+  for (var i = 0; i < errors.length; i++) {
+    var textElement = document.createElement('li');
+    textElement.innerHTML = errors[i];
+    if (Buttons == true) {
+      var span = document.createElement("SPAN");
+      var txt = document.createTextNode("\u00D7");
+      span.className = "close";
+      span.appendChild(txt);
+      textElement.appendChild(span);
+    }
+    liste.appendChild(textElement);
+
+    var close = document.getElementsByClassName("close");
+    for (let x = 0; x < close.length; x++) {
+      close[x].onclick = function () {
+        deleteButton(x);
+      };
+    }
+  }
+}
+
+function ErrorListTeacher() {
+  errors = localStorage.getObj("errorkey");
+  var inputElement = document.querySelector('#emne-field')
+  var inputValue = inputElement.value
+  var inputField = document.querySelector('#besked-field')
+
+  if (inputElement.value != "") {
+    var liste = document.querySelector('.fejl-liste')
+
+    var textElement = document.createElement('li')
+
+    textElement.innerHTML = inputValue;
+    liste.appendChild(textElement)
+
+    errors.push(inputValue);
+    localStorage.setObj("errorkey", errors);
+  }
+  inputElement.value = "";
+  inputField.value = "";
+
 }
