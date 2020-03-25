@@ -18,7 +18,7 @@ background-color: #f44336;
 	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, "sans-serif";
 }
 .header {
-	width: 60%;
+	width: 80%;
 	margin-left: auto;
 	margin-right: auto;
 	padding-top: 50px;
@@ -60,7 +60,7 @@ background-color: #f44336;
 
 #password-field, #username-field {
 	display: block;
-	width:50%;
+	width:80%;
 	margin-left: auto;
 	margin-right: auto;
 	height: 40px;
@@ -112,7 +112,7 @@ body {
 
 .allrakke {
   background-color: lightgray;
-  width: 60%;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
   border-radius: 25px;
@@ -144,7 +144,7 @@ body {
 
 .rakke {
   background-color: black;
-  width: 60%;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
   border-radius: 25px;
@@ -185,7 +185,7 @@ body {
 
 .laerer-fejl {
   background-color: lightgray;;
-  width: 60%;
+  width: 80%;
   margin-left: auto;
   margin-right: auto;
   border-radius: 25px;
@@ -236,7 +236,7 @@ text-align: center;
 
 #emne-field, #besked-field {
 	display: block;
-	width:50%;
+	width:80%;
 	margin-left: auto;
 	margin-right: auto;
 	height: 40px;
@@ -260,10 +260,10 @@ text-align: center;
 }
 
 .fejl-liste {
-	width:50%;
+	width:80%;
   margin-right:auto;
   margin-left:auto;
-width:40%;
+
 	margin-bottom:30px;
 }
 .fejl-liste h2 {
@@ -441,15 +441,6 @@ input:checked + .slider:before {
 
 
 /*--------------------------------------------------------------------------------------------------------------------------------------*/
-@media only screen and (max-width: 768px) {
-  
-	.header, .rakke, .allrakke, .laerer-fejl {
-		width:80%;
-	}
-	
-	#password-field, #username-field, #emne-field, #besked-field  {
-		width:80%;
-	}
-}
+
 
 
