@@ -111,7 +111,7 @@ body {
 
 
 .allrakke {
-  background-color: grey;
+  background-color: lightgray;
   width: 60%;
   margin-left: auto;
   margin-right: auto;
@@ -123,7 +123,7 @@ body {
 }
 .alle {
   height: 150px;
-  color: white;
+  color: black;
   margin-left: auto;
   margin-right: auto;
   position: relative;
@@ -132,7 +132,7 @@ body {
 .controlAll {
   margin-top: 0px;
   height: 250px;
-  color: white;
+  color: black;
   margin-left: auto;
   margin-right: auto;
   display: none;
@@ -150,6 +150,7 @@ body {
   border-radius: 25px;
   margin-bottom: 30px;
   box-shadow: 0 0 1px 1px #606060;
+	
 }
 .oprindelig {
   height: 150px;
@@ -183,7 +184,7 @@ body {
 }
 
 .laerer-fejl {
-  background-color: grey;
+  background-color: lightgray;;
   width: 60%;
   margin-left: auto;
   margin-right: auto;
@@ -192,7 +193,7 @@ body {
   margin-bottom: 30px;
   box-shadow: 0 0 5px 3px black;
   height: 150px;
-  color:white;
+  color:black;
 	position: relative;
 	
 	 
@@ -297,7 +298,7 @@ width:40%;
   border-radius: 5px;
   background: rgba(103, 98, 224, 1);
   outline: none;
-  opacity: 0.7;
+  opacity: 0.9;
   -webkit-transition: .2s;
   transition: opacity .2s;
   display: block;
@@ -313,7 +314,7 @@ width:40%;
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  background: #4CAF50;
+  background: black;
   cursor: pointer;
 ;
 }
@@ -327,7 +328,7 @@ width:40%;
   border-radius: 5px;
   background: rgba(103, 98, 224, 1);
   outline: none;
-  opacity: 0.7;
+  opacity: 0.9;
   -webkit-transition: .2s;
   transition: opacity .2s;
   display: block;
@@ -343,7 +344,7 @@ width:40%;
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  background: #4CAF50;
+  background: black;
   cursor: pointer;
 ;
 }
@@ -358,7 +359,7 @@ width:40%;
   border-radius: 5px;
   background: rgba(103, 98, 224, 1);
   outline: none;
-  opacity: 0.7;
+  opacity: 0.9;
   -webkit-transition: .2s;
   transition: opacity .2s;
   display: block;
@@ -374,7 +375,7 @@ width:40%;
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  background: #4CAF50;
+  background: black;
   cursor: pointer;
 ;
 }
